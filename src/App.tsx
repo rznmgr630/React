@@ -1,15 +1,10 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header"
-import Menu from "./components/Menu";
+import Card from './components/Card';
 import './index.css';
 
 function App() {
-
   return (
-    <div className="container">
-      <Header />
-      <Menu />
-      <Footer />
+    <div>
+      <Card />
     </div>
   )
 }
