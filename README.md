@@ -3,45 +3,45 @@
 ## What is the difference between Vanilla JS and React ?
 
 React:
-a. Library for building UIs
-b. Component-based architecture
-b. Virtual DOM for efficient updates
-d. JSX syntax for HTML-like code in JavaScript
-e. State and props for data management
-f. One-way data binding
-g. Vanilla JS:
+a. Library for building UIs  
+b. Component-based architecture  
+b. Virtual DOM for efficient updates  
+d. JSX syntax for HTML-like code in JavaScript  
+e. State and props for data management  
+f. One-way data binding  
+g. Vanilla JS
 
-Core JavaScript without libraries/frameworks
-a. No built-in component system
-b. Direct manipulation of the DOM
-c. Uses standard HTML/CSS/JS
-d. Manual management of state and UI updates
+Core JavaScript without libraries/frameworks  
+a. No built-in component system  
+b. Direct manipulation of the DOM  
+c. Uses standard HTML/CSS/JS  
+d. Manual management of state and UI updates  
 e. More flexible but can be more complex for large apps
 
 ## Why React.js?
 
-a. Component-Based Architecture:
+a. Component-Based Architecture:  
 Encourages the creation of reusable UI components, which simplifies development and maintenance.
 
-b. Virtual DOM:
+b. Virtual DOM:  
 Optimizes updates by only re-rendering components that have changed, leading to better performance.
 
-c. Declarative UI:
+c. Declarative UI:  
 Allows developers to describe what the UI should look like for different states, making code more predictable and easier to debug.
 
-d. Strong Ecosystem:
+d. Strong Ecosystem:  
 Supported by a vast ecosystem of tools, libraries, and community resources, making it easier to find solutions and integrate with other technologies.
 
-e. Cross-Platform Development:
+e. Cross-Platform Development:  
 With React Native, developers can build mobile apps using the same React principles, enabling code reuse and consistency across platforms.
 
-f. Popularity and Community Support:
+f. Popularity and Community Support:  
 Widely adopted by companies and developers, ensuring long-term support, a large pool of resources, and a strong community.
 
-g. Integration with Modern Web Development:
+g. Integration with Modern Web Development:  
 Works well with other modern web technologies and practices, such as TypeScript, Redux, and server-side rendering.
 
-h. Active Development and Updates:
+h. Active Development and Updates:  
 Backed by Facebook, React receives regular updates, ensuring it remains relevant and aligned with current web standards.
 
 ## What is React.js?
