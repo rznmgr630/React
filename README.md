@@ -2,7 +2,8 @@
 
 ## What is the difference between Vanilla JS and React ?
 
-React:
+### React
+
 a. Library for building UIs  
 b. Component-based architecture  
 b. Virtual DOM for efficient updates  
@@ -11,7 +12,8 @@ e. State and props for data management
 f. One-way data binding  
 g. Vanilla JS
 
-Core JavaScript without libraries/frameworks  
+### Core JavaScript without libraries/frameworks
+
 a. No built-in component system  
 b. Direct manipulation of the DOM  
 c. Uses standard HTML/CSS/JS  
