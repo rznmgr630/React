@@ -1,6 +1,6 @@
 # Important Questions
 
-## What is the difference between Vanilla JS and React ?
+## 1. What is the difference between Vanilla JS and React ?
 
 ### React
 
@@ -20,7 +20,7 @@ c. Uses standard HTML/CSS/JS
 d. Manual management of state and UI updates  
 e. More flexible but can be more complex for large apps
 
-## Why React.js?
+## 2. Why React.js?
 
 a. Component-Based Architecture:  
 Encourages the creation of reusable UI components, which simplifies development and maintenance.
@@ -46,11 +46,11 @@ Works well with other modern web technologies and practices, such as TypeScript,
 h. Active Development and Updates:  
 Backed by Facebook, React receives regular updates, ensuring it remains relevant and aligned with current web standards.
 
-## What is React.js?
+## 3. What is React.js?
 
 React.js, commonly referred to as React, is an open-source JavaScript library developed by Facebook. It's primarily used for building user interfaces (UIs), particularly single-page applications (SPAs). React allows developers to create reusable UI components, which are the building blocks of React applications.
 
-## How reacts works?
+## 4. How reacts works?
 
 React works by creating a virtual representation of the user interface called the Virtual DOM. When the state or props of a component change, React updates this Virtual DOM rather than directly manipulating the real DOM. React then calculates the difference between the previous Virtual DOM and the new one, a process known as reconciliation. It identifies the minimal set of changes required and updates only those parts of the real DOM, making the process efficient and fast.
 
