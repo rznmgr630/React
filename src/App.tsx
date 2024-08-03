@@ -1,39 +1,35 @@
-import { useState } from 'react';
-import './index.css';
+import { useState } from "react";
+import Form from "./components/Form";
+import Logo from "./components/Logo";
+import PackingList from "./components/PackingList";
+import Stats from "./components/Stats";
+import './index.css'
+
+type ItemTypes = {
+  id: number,
+  quantity: number,
+  description: string,
+  packed: boolean
+}
 
 function App() {
-  const [step, setStep] = useState<number>(1);
-  const [count, setCount] = useState<number>(0);
+  const [items, setItems] = useState<ItemTypes[]>([
+    { id: 1, description: 'Passports', quantity: 2, packed: false },
+    { id: 2, description: 'Socks', quantity: 12, packed: false },
+    { id: 3, description: 'Laptop', quantity: 1, packed: false }
+  ]);
 
-  const getDateInfo = () => {
-    const date = new Date();
-    if (count === 0)
-      return 'Today is ' + date.toDateString()
-    else if (count < 0)
-      return count + ' days ago was ' + new Date(date.setDate(date.getDate() + count)).toDateString()
-    else
-      return count + ' days from today is ' + new Date(date.setDate(date.getDate() + count)).toDateString()
-  }
+
+  const handleAdd = (datas: ItemTypes) => setItems(prev => ([...prev, datas]))
 
   return (
-    <div className='container'>
-      <div>
-        <button onClick={() => setStep(prev => prev - 1)}>-</button>
-        <p>Step: {step}</p>
-        <button onClick={() => setStep(prev => prev + 1)}>+</button>
-      </div>
-
-      <div>
-        <button onClick={() => setCount(prev => prev - step)}>-</button>
-        <p>Count: {count}</p>
-        <button onClick={() => setCount(prev => prev + step)}>+</button>
-      </div>
-
-      <div>
-        <p>{getDateInfo()} </p>
-      </div>
+    <div className="app">
+      <Logo />
+      <Form addItem={handleAdd} />
+      <PackingList items={items} />
+      <Stats />
     </div>
   )
 }
 
-export default App
+export default App;
