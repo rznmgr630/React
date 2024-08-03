@@ -1,7 +1,12 @@
-function Stats() {
+type Props = {
+  total: number,
+  completedPercentage: number
+}
+
+function Stats({ total, completedPercentage }: Props) {
   return (
     <footer className="stats">
-      <em>You have X items in your list, and you already packed Y%</em>
+      <em>You have {total} items in your list, and you already packed {completedPercentage}%</em>
     </footer>
   )
 }

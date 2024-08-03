@@ -19,15 +19,16 @@ function App() {
     { id: 3, description: 'Laptop', quantity: 1, packed: false }
   ]);
 
-
   const handleAdd = (datas: ItemTypes) => setItems(prev => ([...prev, datas]))
+
+  const packedItems = items.filter((value) => value.packed).length
 
   return (
     <div className="app">
       <Logo />
       <Form addItem={handleAdd} />
       <PackingList items={items} />
-      <Stats />
+      <Stats total={items.length} completedPercentage={(packedItems / items.length) * 100} />
     </div>
   )
 }
