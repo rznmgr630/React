@@ -20,48 +20,65 @@ body {
   padding: 3.2rem;
   padding-bottom: 6rem;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
-/* card */
-.card {
-  width: 40rem;
-  height: 60rem;
-  border: 3px solid black;
-  border-radius: 4px;
-}
-
-.card img {
-  width: 100%;
-  height: 60%;
-  object-fit: cover;
-}
-
-.card h3 {
-  font-size: 2rem;
-}
-
-.card .details {
+/* container */
+.container {
+  width: 100rem;
+  height: 40rem;
+  border: 1px solid red;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem 2rem;
+  justify-content: space-between;
 }
 
-.card .details p {
-  font-size: 1.4rem;
-}
-
-/* pill */
-.pills {
+.container .steps {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.pill {
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.2rem;
+}
+
+.container .steps .step-item {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.container .steps .active {
+  background-color: blue;
+  color: white;
+}
+
+.information {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* buttons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  padding: 1rem 3rem;
+  background-color: blue;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
   border-radius: 4px;
-  gap: 2rem;
 }
