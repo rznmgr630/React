@@ -13,21 +13,43 @@ type ItemTypes = {
 }
 
 function App() {
-  const [items, setItems] = useState<ItemTypes[]>([
-    { id: 1, description: 'Passports', quantity: 2, packed: false },
-    { id: 2, description: 'Socks', quantity: 12, packed: false },
-    { id: 3, description: 'Laptop', quantity: 1, packed: false }
-  ]);
+  const [items, setItems] = useState<ItemTypes[]>([]);
 
   const handleAdd = (datas: ItemTypes) => setItems(prev => ([...prev, datas]))
 
   const packedItems = items.filter((value) => value.packed).length
 
+  const handleDelete = (id: number) => {
+    const updatedItems = items.filter((value) => value.id !== id)
+    setItems(updatedItems)
+  }
+
+  const handlePacked = (id: number) => {
+    const updatedItems = items.map((value) => value.id === id ? ({ ...value, packed: !value.packed }) : value)
+    setItems(updatedItems)
+  }
+
+  const sortData = (value: string) => {
+    let updatedItems: ItemTypes[];
+    switch (value) {
+      case 'input':
+        updatedItems = items;
+        break
+      case 'description':
+        updatedItems = items.slice().sort((a, b) => a.description.localeCompare(b.description))
+        break;
+      default:
+        updatedItems = items.slice().sort((a, b) => Number(b.packed) - Number(a.packed))
+        break;
+    }
+    setItems(updatedItems)
+  }
+
   return (
     <div className="app">
       <Logo />
       <Form addItem={handleAdd} />
-      <PackingList items={items} />
+      <PackingList items={items} handleDelete={handleDelete} handlePacked={handlePacked} sortData={sortData} />
       <Stats total={items.length} completedPercentage={(packedItems / items.length) * 100} />
     </div>
   )

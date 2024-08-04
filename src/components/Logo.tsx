@@ -2,7 +2,7 @@
 function Logo() {
   return (
     <h1 className="main-heading">
-      Far Away
+      🏖️ Far Away 🧳
     </h1>
   )
 }
