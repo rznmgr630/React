@@ -125,3 +125,11 @@ class ExampleComponent extends React.Component {
 
 export default ExampleComponent;
 ```
+
+## 6. Derived State
+
+Derived state is data computed from existing state or props, rather than stored directly. For example, instead of storing the length of an array, calculate it on the fly from the array itself.
+
+## 7. Lifting Up state
+
+Lifting state up involves moving state to a common ancestor component when multiple components need to share the same data. This centralizes state management, ensuring all related components stay in sync.
